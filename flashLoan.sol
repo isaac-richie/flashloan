@@ -1,4 +1,4 @@
-//YouTube Video: https://youtu.be/FJEVuhyywI8
+
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.10;
 
@@ -32,7 +32,7 @@ contract flashLoan is FlashLoanSimpleReceiverBase {
         );
     }
 
-    function arbitrargeUSDC(address _tokenAddress, uint256 _amount) private  returns(bool) {
+    function arbitrageUSDC(address _tokenAddress, uint256 _amount) private  returns(bool) {
         uint256 arbitraged_amount = (_amount / 10);       
         IERC20 token = IERC20(_tokenAddress);
         return token.transfer(owner, arbitraged_amount);
